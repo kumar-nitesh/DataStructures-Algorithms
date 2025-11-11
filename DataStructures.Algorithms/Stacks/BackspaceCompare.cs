@@ -12,7 +12,7 @@
 
 using System.Text;
 
-namespace DataStructures.Algorithms.Strings
+namespace DataStructures.Algorithms.Stacks
 {
     internal class BackspaceCompare : IExecute
     {

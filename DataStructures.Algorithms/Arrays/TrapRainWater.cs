@@ -1,20 +1,34 @@
-﻿namespace DataStructures.Algorithms.Arrays
+﻿/********************************************************************************************
+ * Trapping Rain Water
+ * 
+ * Source     : LeetCode, Geeks for Geeks - Must Do
+ * Difficulty : Hard
+ * Problem    : https://leetcode.com/problems/trapping-rain-water
+ * Solution   : https://www.youtube.com/watch?v=C8UjlJZsHBw
+ * 
+ * Time Complexity  : O(n)        
+ * Space complexity : O(1) 
+ ********************************************************************************************/
+
+namespace DataStructures.Algorithms.Arrays
 {
     public class TrapRainWater : IExecute
     {
+        public void Execute()
+        {
+            Console.WriteLine("#################LeetCode#####################");
+            Console.WriteLine("42.Trapping Rain Water");
+
+            int[] height = new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+            Console.WriteLine(TrapWater(height));
+        }
+
         /// <summary>
-        /// Geeks for Geeks - Must Do
-        /// Array - Medium
-        /// Problem - https://practice.geeksforgeeks.org/problems/trapping-rain-water/0
-        /// Solution - https://www.youtube.com/watch?v=C8UjlJZsHBw
-        /// https://leetcode.com/problems/trapping-rain-water/discuss/153992/Java-O(n)-time-and-O(1)-space-(with-explanations).
         /// 0. First and Last block can never trap water.
         /// 1. Find Water Level = min(max[Left],max[Right])
         /// 2. Trapped Water = (Water Level - Height of current block) * width
         /// 3. Calculate the Min and Max Window.
         /// 4. Two Pointers - left and right should move towards each other.
-        /// Time Complexity: O(n)
-        /// Space complexity: O(1)
         /// </summary>
         public static int TrapWater(int[] height)
         {
@@ -72,12 +86,6 @@
             }
             // Return the sum we've been adding to.
             return totalWater;
-        }
-
-        public void Execute()
-        {
-            int[] height = new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
-            Console.WriteLine(TrapWater(height));
         }
     }
 }
